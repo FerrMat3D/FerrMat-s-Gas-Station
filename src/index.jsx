@@ -19,7 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     this.audio = new Audio('./sound/natal.mp3');
-    this.audio.volume = 0.3;
+    this.audio.volume = 0;
     this.audio.addEventListener('ended', this.handleAudioEnded);
 
     if (this.state.isInitialLoad) {
@@ -27,7 +27,7 @@ class App extends Component {
         document.addEventListener('click', this.handleFirstInteraction);
         document.addEventListener('touchstart', this.handleFirstInteraction);
       } else {
-        this.playAudio();
+   //     this.playAudio();
       }
 
       this.setState({ isInitialLoad: false });
@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   handleFirstInteraction = () => {
-    this.playAudio();
+    //this.playAudio();
     this.setState({ hasUserInteracted: true });
     document.removeEventListener('click', this.handleFirstInteraction);
     document.removeEventListener('touchstart', this.handleFirstInteraction);
@@ -53,25 +53,29 @@ class App extends Component {
   };
 
   playAudio = () => {
-    if (this.state.isAudioPlaying && this.state.isVolumeOn) {
-      this.audio.play();
-    } else {
-      this.audio.pause();
+    const { isAudioPlaying, isVolumeOn, hasUserInteracted } = this.state;
+  
+    if (hasUserInteracted) {
+      if (isAudioPlaying && isVolumeOn) {
+     //   this.audio.play();
+      } else {
+     //   this.audio.pause();
+      }
     }
   };
 
   handleAudioEnded = () => {
-    this.audio.currentTime = 0;
-    this.audio.play();
+   // this.audio.currentTime = 0;
+    //this.audio.play();
   };
 
   handleVolumeToggle = () => {
     const { isAudioPlaying, isVolumeOn } = this.state;
 
     if (isAudioPlaying) {
-      this.audio.pause();
+    //  this.audio.pause();
     } else {
-      this.audio.play();
+    //  this.audio.play();
     }
 
     this.setState((prevState) => ({

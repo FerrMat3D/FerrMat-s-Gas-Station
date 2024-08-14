@@ -9,6 +9,8 @@ import { useBox } from '@react-three/cannon';
 export const LotusEspirit = forwardRef(({ args = [6, 3  , 13], mass = 2500, setVisible, ...props }, ref) => {
   const { nodes, materials } = useGLTF("./LotusEspirit.glb");
 
+  
+
   const [, api] = useBox(
     () => ({
       mass,
@@ -23,7 +25,7 @@ export const LotusEspirit = forwardRef(({ args = [6, 3  , 13], mass = 2500, setV
   return (
 
     <group  dispose={null} ref={ref} api={api} userData={{ id: 'lotusespirit' }} {...props} scale={4} >
-        <group position={[0, 0.02069213, 0]} rotation={[0, Math.PI / 2, 0]}>
+      <group position={[0, 0.06069213, 0]} rotation={[0, Math.PI / 2, 0]}>
         <mesh
           castShadow
           receiveShadow
@@ -155,48 +157,6 @@ export const LotusEspirit = forwardRef(({ args = [6, 3  , 13], mass = 2500, setV
           receiveShadow
           geometry={nodes.Plane019_21.geometry}
           material={materials["Material.030"]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane019_22.geometry}
-          material={materials.laco}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane019_23.geometry}
-          material={materials.TAMPA}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane019_24.geometry}
-          material={materials.cor22}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane019_25.geometry}
-          material={materials.cor3}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane019_26.geometry}
-          material={materials["Material.004"]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane019_27.geometry}
-          material={materials.branco}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane019_28.geometry}
-          material={materials.color}
         />
       </group>
     </group>

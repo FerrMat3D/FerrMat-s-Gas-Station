@@ -10,8 +10,10 @@ export function ThreeJsJourney(props) {
   return (
     <group {...props} dispose={null}>
     <mesh
+  
       castShadow
       receiveShadow
+
       geometry={nodes.Text001.geometry}
       material={materials.letras01}
       position={[-9.57071495, 41.55897903, 149.92417908]}

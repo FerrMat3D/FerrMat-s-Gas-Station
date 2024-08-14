@@ -7,14 +7,15 @@ import { useGLTF } from "@react-three/drei";
 
 export function SkyBox(props) {
   const { nodes, materials } = useGLTF("./SkyBox.glb");
+  
   return (
     <group {...props} dispose={null}>
-      <mesh
+          <mesh
         castShadow
         receiveShadow
         geometry={nodes.Sphere.geometry}
         material={materials["Material.033"]}
-        position={[0.00001315, 25.08730125, -0.0000045]}
+        position={[0.00001315, 7.08730125, -0.0000045]}
         scale={[282.64517212, 144.15718079, 282.64517212]}
       />
     </group>

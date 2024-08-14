@@ -85,6 +85,18 @@ export function GasStation(props) {
         scale={[10.48561764, 0.324, 17.33160019]}
       />
 
+
+<mesh
+        name="roof_top"
+        castShadow
+        receiveShadow
+        geometry={nodes.roof_top.geometry}
+        material={materials["Material.010"]}
+        position={[0, 15.77519894, 0]}
+        rotation={[-Math.PI, 0, 0]}
+        scale={[10.48561764, 0.324, 17.33160019]}
+      />
+
       <group
         name="roof_struct"
         position={[0.01433045, 16.16393661, -5.77713776]}

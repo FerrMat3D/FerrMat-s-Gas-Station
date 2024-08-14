@@ -14,7 +14,7 @@ const FORWARD_BOUNDARY = 210;
 const BACKWARD_BOUNDARY = -220;
 
 
-const Vehicle = ({ radius = 0.8, width = 3.7, height = -0.9, front = 3.6, back = -3.9, steer = 0.7, force = 80000, maxBrake = 2.3e4, position, ...props }) => {
+const Vehicle = ({ radius = 1, width = 3.7, height = -0.9, front = 3.6, back = -3.9, steer = 0.7, force = 80000, maxBrake = 2.3e4, position, ...props }) => {
     const chassis = useRef();
     const wheel1 = useRef();
    const wheel2 = useRef();
@@ -54,7 +54,7 @@ const wheel4 = useRef();
       dampingCompression: 3, // Ajustado o valor aqui
       useCustomSlidingRotationalSpeed: true,
       customSlidingRotationalSpeed: 20,
-      frictionSlip: 0.25
+      frictionSlip: 0.5
     };
 
 

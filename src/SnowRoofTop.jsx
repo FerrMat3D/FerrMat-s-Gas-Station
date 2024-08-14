@@ -9,15 +9,7 @@ export function SnowRoofTop(props) {
   const { nodes, materials } = useGLTF("./SnowRoofTop.glb");
   return (
     <group {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.roof_top.geometry}
-        position={[0, 15.77519894, 0]}
-        material={materials["Material.010"]}
-        rotation={[-Math.PI, 0, 0]}
-        scale={[10.48561764, 0.324, 17.33160019]}
-      />
+
         <mesh
         castShadow
         receiveShadow
