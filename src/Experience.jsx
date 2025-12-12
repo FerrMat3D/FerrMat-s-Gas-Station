@@ -291,7 +291,7 @@ setOrbitControlsEnabled(true);
         <directionalLight ref={directionalLight}
         castShadow 
         position={ [ -35,35, 0 ] }
-         intensity={ 1.4 } 
+         intensity={ 2.4 } 
          shadow-normalBias={0.1}
          shadow-mapSize={[1024*2,1024*2]}
          shadow-camera-top={50}
@@ -313,7 +313,7 @@ setOrbitControlsEnabled(true);
 
 
 
-<fog attach="fog" args={[0x000000, 0,70, 0.1]} />
+<fog attach="fog" args={[0xffffff, 0,70, 0.1]} />
 
 
 
