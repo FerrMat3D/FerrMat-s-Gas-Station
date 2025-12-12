@@ -313,7 +313,7 @@ setOrbitControlsEnabled(true);
 
 
 
-<fog attach="fog" args={[0xffffff, 0,70, 0.1]} />
+<fog attach="fog" args={[0x000000, 0,70, 0.1]} />
 
 
 
