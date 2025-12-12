@@ -302,7 +302,7 @@ setOrbitControlsEnabled(true);
          //shadow-camera-far={shadorCamerafar}
          />
 
-         <ambientLight intensity={0.2}></ambientLight>
+         <ambientLight intensity={0.5}></ambientLight>
 
 
 <pointLight castShadow={false} distance={30} power={10} color="#ff00aa" intensity={1.5} position={[0, 15, 5]} />
