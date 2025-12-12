@@ -291,7 +291,7 @@ setOrbitControlsEnabled(true);
         <directionalLight ref={directionalLight}
         castShadow 
         position={ [ -35,35, 0 ] }
-         intensity={ 0.4 } 
+         intensity={ 1.4 } 
          shadow-normalBias={0.1}
          shadow-mapSize={[1024*2,1024*2]}
          shadow-camera-top={50}
